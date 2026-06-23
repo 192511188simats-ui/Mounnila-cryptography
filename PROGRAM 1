@@ -1,0 +1,21 @@
+# Simple MD5-like hash
+def md5_sim(data):
+    h = 0
+    for ch in data:
+        h = (h + ord(ch)) % 10000
+    return h
+
+# Simple SHA-256-like hash
+def sha256_sim(data):
+    h = 0
+    for ch in data:
+        h = (h * 31 + ord(ch)) % 100000
+    return h
+
+text = input("Enter data: ")
+
+md5_hash = md5_sim(text)
+sha_hash = sha256_sim(text)
+
+print("MD5 Hash     :", md5_hash)
+print("SHA-256 Hash :", sha_hash)
