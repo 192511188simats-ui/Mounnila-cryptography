@@ -1,0 +1,18 @@
+file1 = input("Enter original text: ")
+file2 = input("Enter modified text: ")
+
+hash1 = 0
+for ch in file1:
+    hash1 = (hash1 * 31 + ord(ch)) % 100000
+
+hash2 = 0
+for ch in file2:
+    hash2 = (hash2 * 31 + ord(ch)) % 100000
+
+print("Original Hash :", hash1)
+print("Modified Hash :", hash2)
+
+if hash1 == hash2:
+    print("File Integrity Maintained")
+else:
+    print("File Modified")
