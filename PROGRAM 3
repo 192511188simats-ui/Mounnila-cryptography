@@ -1,0 +1,18 @@
+message = input("Enter message: ")
+
+signature = 0
+
+for ch in message:
+    signature = signature + ord(ch)
+
+print("Digital Signature :", signature)
+
+verify = 0
+
+for ch in message:
+    verify = verify + ord(ch)
+
+if signature == verify:
+    print("Signature Verified")
+else:
+    print("Verification Failed")
