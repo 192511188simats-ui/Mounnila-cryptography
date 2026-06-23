@@ -1,0 +1,9 @@
+username = input("Enter Username: ")
+password = input("Enter Password: ")
+
+if username == "admin" and password == "1234":
+    ticket = "TICKET123"
+    print("Authentication Successful")
+    print("Ticket Generated:", ticket)
+else:
+    print("Authentication Failed")
